@@ -115,8 +115,11 @@ import fs from 'fs';
 
 
 3) Crea la base de datos en MySQL (ajusta puerto/usuario si aplica)
+   En Supabase, la base de datos ya viene creada por defecto, pero puedes crear el esquema y tablas necesarias desde la sección SQL.
+   
+Ejemplo para crear el esquema:
 ```sql
-CREATE DATABASE crudroom CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE SCHEMA IF NOT EXISTS registro_actividades;
 ```
 
 4) Crea tu archivo `.env`
