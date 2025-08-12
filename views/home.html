@@ -1,0 +1,73 @@
+<section class="hero-header">
+  <h1>Bienvenido/a, <span id="userNameHome">Usuario</span> 👋</h1>
+  <p id="userRoleHome">Tu rol: <strong>Usuario</strong></p>
+</section>
+
+<section class="dashboard-stats">
+  <div class="stat-card">
+    <img src="../assets/img/sport.webp" alt="icon">
+    <div>
+      <h3 id="availableCount">0</h3>
+      <p>Actividades registradas</p>
+    </div>
+  </div>
+  <div class="stat-card">
+    <img src="../assets/img/user.png" alt="icon">
+    <div>
+      <h3 id="userType">Usuario</h3>
+      <p>Tipo de cuenta</p>
+    </div>
+  </div>
+</section>
+
+<section class="quick-actions">
+  <h2>Accesos rápidos</h2>
+  <div class="action-grid">
+    <a href="/activities" data-link class="action-item">
+      <img src="../assets/icons/activities-list.svg" alt="Mis actividades" />
+      <span>Mis actividades</span>
+    </a>
+    <a href="/about" data-link class="action-item">
+      <img src="./assets/icons/explore.svg" alt="Explorar" />
+      <span>Explorar actividades</span>
+    </a>
+    <a href="/add_activity" data-link class="action-item">
+      <img src="../assets/icons/new.svg" alt="Agregar" />
+      <span>Registrar nueva</span>
+    </a>
+    <a href="/upload_user" data-link class="action-item admin-only">
+      <img src="../assets/icons/upload-gray.svg" alt="Admin" />
+      <span>Gestión (Admin)</span>
+    </a>
+  </div>
+</section>
+
+<section class="about-section">
+  <h2>¿Qué es esta plataforma?</h2>
+  <p>
+    BienestarApp es una plataforma para ayudarte a llevar un control organizado de tus hábitos saludables. Puedes registrar desde caminatas y meditación hasta lectura o yoga.
+  </p>
+  <p>
+    Es rápida, segura, intuitiva y completamente construida como SPA con JavaScript vanilla, CSS limpio y una API backend real.
+  </p>
+</section>
+
+
+<!-- navigate.js
+
+if (pathname === "/home") {
+  const user = JSON.parse(localStorage.getItem("UserData"));
+  document.getElementById("userNameHome").textContent = user?.nombre || "Usuario";
+  document.getElementById("userRoleHome").innerHTML = `Tu rol: <strong>${user?.rol || "User"}</strong>`;
+  document.getElementById("userType").textContent = user?.rol || "User";
+
+  // Solo mostrar el acceso admin si es administrador
+  const adminLink = document.querySelector(".admin-only");
+  if (user?.rol !== "Admin") {
+    adminLink.style.display = "none";
+  }
+
+  // Simulador de conteo (puedes hacer fetch real si quieres)
+  const actividades = await fetch('http://localhost:3000/actividades').then(r => r.json());
+  document.getElementById("activityCount").textContent = actividades.length;
+} -->

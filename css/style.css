@@ -1,0 +1,472 @@
+/*  This block applies a global reset to remove default margins, paddings, and ensure consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fa;
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #1e1e2f;
+  color: #fff;
+  width: 240px;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar-header h1 a {
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.profile {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+}
+
+.profile p {
+  margin: 10px 0 0;
+  font-weight: bold;
+}
+
+#role {
+  font-size: 14px;
+  color: #bbb;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  padding: 12px 10px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 10px 0;
+  transition: background 0.2s ease;
+}
+
+nav a:hover {
+  background: #343450;
+}
+
+nav a img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+#logout {
+  background: #e74c3c;
+  border: none;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#logout:hover {
+  background: #c0392b;
+}
+
+.container {
+  flex: 1;
+  /* padding: 40px; */
+}
+
+.content h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.content p {
+  font-size: 16px;
+  color: #555;
+  /* max-width: 700px; */
+  margin-bottom: 20px;
+}
+
+.section-main h2 {
+  font-size: 22px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.section-main ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.section-main li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles the logout button at the bottom of the sidebar, making it look like a link with purple borders */
+#logout {
+    margin: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff4d4d;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#logout:hover {
+    background-color: #ff1a1a;
+}
+
+/* CONTENT */
+.content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.section-main {
+    margin-bottom: 40px;
+}
+
+.section-main h1, h2 {
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+span {
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* LOGIN STYLING */
+/* Center the login form in the viewport */
+.login-centered {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+/* Card container for the login form */
+.login-form {
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form title */
+.login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Input labels */
+.login-form label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Input fields */
+.login-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+.login-form input:focus {
+    border-color: #7300ff;
+    outline: none;
+}
+
+/* Submit button */
+.login-form button {
+    background-color: #8b38f1;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #5e1eac;
+}
+
+/* REGISTER STYLING */
+.register-link {
+  display: flex;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.register-link a {
+  color: #7300ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Container del formulario de registro */
+.login {
+  max-width: 400px;
+  width: 100%;
+  background-color: #f2e9ff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 40px auto;
+}
+
+/* Título */
+.login h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Estilos para el formulario */
+.login form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.login label {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* Inputs */
+.login input {
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Botón registrar */
+.login button {
+  padding: 0.8rem;
+  background-color: #7300ff;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+  background-color: #5b00cc;
+}
+
+/* Enlace para iniciar sesión */
+.register-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.register-link a {
+  color: #7300ff;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.sidebar nav a.active {
+  background-color: #5d5d91; 
+  color: white; 
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+    background-color: #1e1e2f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar-header {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    background-color: #2e2e42;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px 0;
+    border: 2px solid white;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4px;
+    padding: 10px;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  nav a {
+    flex: 1 0 auto;
+    padding: 10px;
+    font-size: 0.85rem;
+    background-color: #2e2e42;
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    text-decoration: none;
+  }
+
+  nav a img {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+  }
+
+  #logout {
+    width: 90%;
+    margin: 15px auto;
+    display: block;
+  }
+
+  .content {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+  }
+}

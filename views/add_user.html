@@ -1,0 +1,32 @@
+<section class="add-student-view">
+    <div class="form-card">
+        <button id="goBackBtn" class="go-back-btn" title="Go back">
+            <img src="../assets/icons/back_arrow.png" alt="Back" />
+        </button>
+
+        <h1>Add New User</h1>
+        <div class="avatar-placeholder">
+            <img src="../assets/img/user-icon.png" alt="User Icon" />
+        </div>
+        <h2>Register New User</h2>
+
+        <form id="userForm">
+            <label>Name</label>
+            <input type="text" id="userName" placeholder="User name" required />
+
+            <label>Email</label>
+            <input type="email" id="userEmail" placeholder="Email" required />
+
+            <label>Role</label>
+            <select id="userRole" required>
+                <option value="" disabled selected>Select role</option>
+                <option value="user">user</option>
+                <option value="admin">admin</option>
+            </select>
+
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</section>
+
+<script type="module" src="../js/addUser.js"></script>

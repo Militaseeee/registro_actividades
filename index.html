@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="../css/activities.css"/>
+    <link rel="stylesheet" href="../css/add_activity.css"/>
+    <link rel="stylesheet" href="../css/upload.css"/>
+    <link rel="stylesheet" href="../css/admin_activities.css"/>
+    <link rel="stylesheet" href="../css/users.css"/>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <header class="sidebar-header">
+            <h1><a href="/home" data-link>Events</a></h1>
+            <div class="profile">
+                <img alt="Admin" id="changePicture"/>
+                <p id="nameUser"></p>
+                <span id="role">Admin</span>
+            </div>
+        </header>
+        <nav>
+            <a href="/activities" data-link><img src="./assets/icons/activity.svg" alt="Events Icon">Activities</a>
+            <a href="/add_activity" data-link id="addBook"><img src="./assets/icons/new-activity.svg" alt="New activity Icon">New Activity</a>
+            <a href="/admin_activities" data-link class="admin-only"><img src="./assets/icons/view-list-admin.svg" alt="activities User Icon">View Activity User</a>
+            <a href="/users" data-link class="admin-only"><img src="./assets/icons/users.svg" alt="Users Icon">Users</a>
+            <a href="/add_user" data-link class="admin-only"><img src="./assets/icons/new-user.svg" alt="New user Icon">New User</a>
+            <a href="/upload_user" data-link class="admin-only"><img src="./assets/icons/upload.svg" alt="Available Icon">Record</a>
+            <a href="/about" data-link><img src="./assets/icons/info-w.svg" alt="About Icon">About</a>
+        </nav>
+        <button id="logout">cerrar sesión</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div id="content" class="content">
+            <h1>Bienvenido a tu biblioteca SPA</h1>
+            <p>SPA Gosling es una aplicación web creada para gestionar usuarios de manera eficiente. Permite a los administradores ver, agregar y editar información de eventos.</p>
+            
+            <section class="section-main">
+                <h2>Main Features</h2>
+                <ul>
+                <li>Ver usuarios</li>
+                <li>Crear nuevos usuarios</li>
+                <li>Editar y eliminar usuarios</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <script type="module" src="./js/script.js"></script>
+</body>
+</script>
+</html>

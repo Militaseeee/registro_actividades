@@ -1,0 +1,173 @@
+.add-student-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.form-card {
+    position: relative; /* 👈 necesario para posicionar la flecha dentro */
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.form-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+.avatar-placeholder {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-placeholder img {
+    width: 60px;
+    opacity: 0.5;
+}
+
+.form-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.form-card form label {
+    display: block;
+    text-align: left;
+    margin: 0.5rem 0 0.2rem;
+    font-size: 0.9rem;
+}
+
+.form-card form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-card input:focus {
+    border-color: #4545cf;
+    outline: none;
+}
+
+.form-card form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 1rem;
+    padding-right: 2.5rem;
+    /* Para que la flecha de dropdown se vea nativa */
+    /* appearance: none; */
+
+    cursor: pointer;
+}
+
+.form-card form select:focus {
+    border-color: #4545cf;
+    outline: none;
+}
+
+/* Opcional: para que el texto placeholder de <option disabled> se vea gris */
+.form-card form select option[disabled] {
+    color: #999;
+}
+
+.form-card form button {
+    width: 30%;    
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #4545cf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-card form button:hover {
+    background-color: #28286e;
+}
+
+.go-back-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.go-back-btn img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.go-back-btn:hover img {
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    .form-card {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+
+    .form-card h1 {
+        font-size: 1.3rem;
+    }
+
+    .form-card h2 {
+        font-size: 1.1rem;
+    }
+}
+
+/* 📱 Responsive: Teléfonos pequeños */
+@media (max-width: 480px) {
+    .form-card {
+        padding: 1rem;
+    }
+
+    .avatar-placeholder {
+        width: 80px;
+        height: 80px;
+    }
+
+    .avatar-placeholder img {
+        width: 50px;
+    }
+
+    .form-card form input {
+        font-size: 0.95rem;
+    }
+
+    .form-card form button {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    .go-back-btn img {
+        width: 20px;
+        height: 20px;
+    }
+}

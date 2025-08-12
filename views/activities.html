@@ -1,0 +1,50 @@
+<header>
+    <h1>Activities List</h1>
+    <div class="header-toolbar">
+        <div class="available-books-summary">
+            <strong>Available activities: <span id="availableCount">0</span></strong>
+        </div>
+
+        <div class="search-and-button">
+            <input type="text" id="searchInput" placeholder="Search by event name..." />
+            <button id="addEventsBtn">ADD NEW ACTIVITY</button>
+        </div>
+    </div>
+</header>
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Categoria</th>
+            <th>Actividad</th>
+            <th>Fecha</th>
+            <th>Duración (min)</th>
+            <th>Descripción</th>
+            <th id="actionHide">Actions</th>
+            <!-- <th id="actionHide">Actions</th> -->
+        </tr>
+    </thead>
+    <tbody id="eventTableBody"></tbody>
+</table>
+
+<div class="modal" id="bookModal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="modalTitle">New Event</h2>
+        <form id="eventForm">
+            <input type="hidden" id="categoryId" />
+            <!-- <input type="text" id="activities" placeholder="activities" required /> -->
+            <select id="nombre_actividad" required>
+                <option value="" disabled selected>Seleccione una actividad</option>
+                <!-- Aquí se llenarán las opciones dinámicamente -->
+            </select>
+            <input type="date" id="date" placeholder="date" required />
+            <input type="number" id="duration" placeholder="Duration (minutes)" min="1" required />
+            <!-- <textarea id="descripcion" placeholder="Descripción" required></textarea> -->
+            <input type="text" id="description" placeholder="description" required />
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</div>
+<script type="module" src="../js/script.js"></script>

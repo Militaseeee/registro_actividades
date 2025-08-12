@@ -1,0 +1,30 @@
+<header>
+    <h1>Historial de Actividades - Administrador</h1>
+    <div class="header-toolbar">
+        <div class="summary">
+            <strong>Total registros: <span id="totalRegistros">0</span></strong>
+        </div>
+
+        <div class="search-and-filter">
+            <select id="categoryFilter">
+                <option value="">Todas las categorías</option>
+                <!-- Se llenará dinámicamente -->
+            </select>
+            <input type="text" id="searchInput" placeholder="Buscar por usuario..." />
+        </div>
+    </div>
+</header>
+
+<table>
+    <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Categoría</th>
+            <th>Actividad</th>
+            <th>Fecha</th>
+            <th>Duración</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody id="actividadesTableBody"></tbody>
+</table>

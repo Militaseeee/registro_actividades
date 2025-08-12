@@ -1,0 +1,52 @@
+<header>
+    <h1>Users List</h1>
+    <div class="header-toolbar">
+        <div class="users-summary">
+            <strong>Total users: <span id="totalUsersCount">0</span></strong>
+        </div>
+
+        <div class="search-and-button">
+            <input type="text" id="searchInput" placeholder="Search by name or email..." />
+            <button id="addUserBtn">ADD NEW USER</button>
+        </div>
+    </div>
+</header>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Rol</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="usersTableBody"></tbody>
+</table>
+
+<!-- Modal para Editar Usuario -->
+<div class="modal" id="userModal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h2 id="modalTitle">Add User</h2>
+        <form id="userForm">
+            <input type="hidden" id="userId" />
+
+            <label for="userName">Nombre:</label>
+            <input type="text" id="userName" required />
+
+            <label for="userEmail">Correo:</label>
+            <input type="email" id="userEmail" required />
+
+            <label for="userRole">Rol:</label>
+            <select id="userRole" required>
+                <option value="user">user</option>
+                <option value="admin">admin</option>
+            </select>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</div>
+
+<script type="module" src="../js/users.js"></script>

@@ -1,0 +1,31 @@
+<section class="add-student-view">
+    <div class="form-card">
+        <button id="goBackBtn" class="go-back-btn" title="Go back">
+            <img src="../assets/icons/back_arrow.png" alt="Back" />
+        </button>
+        <h1>Add New Activity</h1>
+        <div class="avatar-placeholder">
+            <img src="../assets/img/new-book.png" alt="Event Icon"/>
+        </div>
+        <h2>Register New Activity</h2>
+        <form id="addEventForm">
+            <input type="hidden" id="id_usuario" />
+            
+            <label>Activity</label> 
+            <!-- <input type="text" id="nombre_actividad" placeholder="Activity name" required /> -->
+
+            <select id="nombre_actividad" required>
+                <option value="" disabled selected>Seleccione una actividad</option>
+                <!-- Aquí se llenarán las opciones dinámicamente -->
+            </select>
+
+            <label>Date</label>
+            <input type="date" id="fecha" required />
+            <label>Duration</label>
+            <input type="number" id="duracion_min" placeholder="Duration (minutes)" min="1" required />
+            <label>Description</label>
+            <input type="text" id="descripcion" placeholder="Description" required />
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</section>
